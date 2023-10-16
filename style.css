@@ -19,10 +19,12 @@ body{
 
 #card{
     height: 450px;
-    width: 330px;
+    width: 315px;
     background-color: whitesmoke;
-    border-radius: 12px;
+    border-radius: 15px;
+    overflow: hidden;
     border: 3px solid #000;
+    position: relative;
 }
 
 #stories{
@@ -30,7 +32,13 @@ body{
     width: 100%;
     border-bottom: 1px solid #444;
     padding: 9px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
 
+#stories::-webkit-scrollbar { 
+    display: none;
 }
 
 .story{
@@ -39,6 +47,8 @@ body{
     width: 80px;
     border-radius: 50%;
     overflow: hidden;
+    display: inline-block;
+    margin-right: 5px;
 }    
 
 .story img{
@@ -46,5 +56,13 @@ body{
     width:100%;
     object-fit: cover;
     object-position: center;
+}
 
+#full-screen{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    display: none;
 }
